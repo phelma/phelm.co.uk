@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
   <title>phelm</title>
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
   <style>
@@ -10,7 +11,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%
+      width: 100%;
     }
 
     .main {
@@ -20,6 +21,12 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     h1 {
@@ -32,5 +39,10 @@
   <div class="main">
     <h1>phelm</h1>
   </div>
+  <script>
+    document.ontouchmove = function(e){
+      e.preventDefault();
+    }
+  </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      cursor:  none;
+      /*cursor:  none;*/
     }
 
     .main {
@@ -28,21 +28,41 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      position: relative;
     }
 
-    h1 {
-      font-size: 20vw;
-      font-family: 'Titillium Web', sans-serif;
-      background: url(image-00006.jpg) no-repeat;
-      background-size: cover;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .psy {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      animation: hue-rotate 20s linear infinite;
     }
+
+    .cutout {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @keyframes hue-rotate {
+      from {
+        filter: hue-rotate(0);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+
   </style>
 </head>
 <body>
   <div class="main">
-    <h1>phelm</h1>
+    <img src="psychedelic-1.jpg" alt="" class="psy">
+    <img src="cutout.png" class="cutout" alt="">
   </div>
   <script>
     document.ontouchmove = function(e){
